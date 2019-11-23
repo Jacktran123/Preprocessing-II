@@ -1,1 +1,30 @@
 // Mixins in here
+.btn-style(@padding,@border,@background-button){
+    padding: @padding;
+    border: @border;
+    background: @background-button;
+    text-align: center;
+    border-radius: 100px;
+    width: 15vw;
+    font-size: 2rem;
+        &:hover{
+            transition: 4s;
+            padding: 20px;
+            background: lighten(@background-button, 30%);
+        }
+}
+
+.mobilestyle(@flex) {
+    @media @mobile{
+        flex-direction: @flex;
+        align-items: center;
+    }
+}
+
+.btn-mobile(@width){
+    @media @mobile{
+        width: @width;
+        
+    }
+}
+   
